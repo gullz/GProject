@@ -1,0 +1,43 @@
+$date
+	Sun Jun  7 18:45:48 2015
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module modulusTB $end
+$scope module uut $end
+$var wire 8 ! divider [7:0] $end
+$var wire 8 " mod [7:0] $end
+$var wire 16 # number [15:0] $end
+$var reg 8 $ divTemp [7:0] $end
+$var reg 8 % modTemp [7:0] $end
+$var reg 16 & numTemp [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10000000 &
+b1100000 %
+b1 $
+b11100000 #
+b1100000 "
+b10000000 !
+$end
+#5
+b1011001 %
+b1011001 "
+b1111110 &
+b1111110 !
+b11010111 #
+#10
+b10001 %
+b10001 "
+b100000000 &
+b10 $
+b10000000 !
+b100010001 #
+#15
