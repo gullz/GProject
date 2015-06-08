@@ -4,17 +4,18 @@ module EncDecTB();
   reg [2:0]ky;
   wire [7:0]outval;
   
-  EncDec uut(.inp(num),.select(sel),.CLK(clk),.key(ky),.out(outval));
+  EncDec uut2(.inp(num),.select(sel),.CLK(clk),.key(ky),.out(outval));
   
   initial begin
     $dumpfile("EncDec.vcd");
-    $dumpvars(0,uut);
+    $dumpvars(0,uut2);
     $monitor("clock=%b number=%c, select=%d, key=%d out=%d",clk,num,sel,ky,outval);
     
-    #0 clk=0;num=65;sel=1;ky=3;
-    #5 sel=1;
-    #5 num=91;
-    #10 $finish;
+    #0 clk=0;num=65;sel=0;ky=3;
+    #20 sel=1;
+    #20 num=99;sel=0;
+    #20 sel=1;
+    #20 $finish;
   end
   always #1  clk=!clk;
 endmodule
